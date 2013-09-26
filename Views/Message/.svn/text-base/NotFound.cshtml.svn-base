@@ -1,0 +1,5 @@
+﻿@{
+    ViewBag.Title = "Ikke funnet";
+}
+
+<h2>Meldingen ble ikke funnet... Prøv en annen eller på nytt</h2>

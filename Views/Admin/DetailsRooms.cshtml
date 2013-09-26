@@ -1,0 +1,34 @@
+﻿@model WebChat.Models.Chatroom
+
+@{
+    ViewBag.Title = "Detaljer";
+}
+
+<h2>Detaljer</h2>
+
+<fieldset>
+    <legend>Chatroom</legend>
+
+    <div class="display-label">Navn</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">Dato</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Date)
+    </div>
+
+    <div class="display-label">Offentlig</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsPublic)
+    </div>
+
+    <div class="display-label">Maks antall brukere</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MaximumUsers)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Tilbake", "ListRooms")
+</p>

@@ -1,0 +1,15 @@
+﻿@model WebChat.Models.MessageFormViewModel
+           
+@{
+    ViewBag.Title = "Rom";
+}
+
+<h2>Rom</h2>
+
+
+@{Html.RenderPartial("RoomForm");}
+@{Html.RenderPartial("MessagesForm");}
+
+<p>
+    @Html.ActionLink("Tilbake", "Index")
+</p>

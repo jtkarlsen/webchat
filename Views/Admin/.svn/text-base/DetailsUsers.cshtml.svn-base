@@ -1,0 +1,34 @@
+﻿@model WebChat.Models.aspnet_User
+
+@{
+    ViewBag.Title = "Detaljer";
+}
+
+<h2>Detaljer</h2>
+
+<fieldset>
+    <legend>Brukere</legend>
+
+    <div class="display-label">Brukernavn</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+
+    <div class="display-label">Mobilt brukernavn</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MobileAlias)
+    </div>
+
+    <div class="display-label">Anonym</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsAnonymous)
+    </div>
+
+    <div class="display-label">Sist aktiv</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastActivityDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Tilbake", "ListUsers")
+</p>

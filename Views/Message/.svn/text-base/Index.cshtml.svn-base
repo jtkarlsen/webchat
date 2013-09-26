@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WebChat.Models.Message>
+
+@{
+    ViewBag.Title = "Meldinger";
+}
+
+<h2>Meldinger</h2>
+
+<table>
+    <tr>
+        <th>
+            Forfatter ID
+        </th>
+        <th>
+            Dato
+        </th>
+        <th>
+            Chatroom
+        </th>
+        <th>
+            Melding
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AuthorId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Chatroom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Message1)
+        </td>
+        <td>
+            @Html.ActionLink("Endre", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detaljer", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Slett", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

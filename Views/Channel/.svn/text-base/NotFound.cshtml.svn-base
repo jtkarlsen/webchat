@@ -1,0 +1,5 @@
+﻿@{
+    ViewBag.Title = "Ikke funnet";
+}
+
+<h2>Rom ikke funnet.. Prøv et annet eller prøv på nytt</h2>

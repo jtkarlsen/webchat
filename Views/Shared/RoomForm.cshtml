@@ -1,0 +1,24 @@
+﻿@model WebChat.Models.MessageFormViewModel
+<fieldset>
+    <legend>Chatroom</legend>
+    
+    <div class="display-label">Offentlig</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.chat.IsPublic)
+    </div>
+
+    <div class="display-label">Eier</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.user.UserName)
+    </div>
+
+    <div class="display-label">Maks antall brukere</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.chat.MaximumUsers)
+    </div>
+
+    <div class="display-label">Dato</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.chat.Date)
+    </div>
+</fieldset>

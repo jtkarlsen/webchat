@@ -1,0 +1,8 @@
+﻿@{
+    ViewBag.Title = "Om oss";
+}
+
+<h2>Om oss</h2>
+<p>
+     Innhold kommer etter hvert :)
+</p>

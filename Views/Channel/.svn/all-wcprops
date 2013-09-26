@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Channel
+END
+index.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Channel/index.cshtml
+END
+NotFound.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Channel/NotFound.cshtml
+END
+PublicRooms.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Channel/PublicRooms.cshtml
+END
+YourRooms.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Channel/YourRooms.cshtml
+END
+Create.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Channel/Create.cshtml
+END
+Edit.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Channel/Edit.cshtml
+END

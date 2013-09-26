@@ -1,0 +1,38 @@
+﻿@model WebChat.Models.Message
+
+@{
+    ViewBag.Title = "Slett";
+}
+
+<h2>Slett</h2>
+
+<h3>Er du sikker på at du vil slette dette?</h3>
+<fieldset>
+    <legend>Melding</legend>
+
+    <div class="display-label">Forfatter Id</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AuthorId)
+    </div>
+
+    <div class="display-label">Dato</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Date)
+    </div>
+
+    <div class="display-label">Chatroom</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Chatroom)
+    </div>
+
+    <div class="display-label">Melding</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Message1)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Tilbake", "Index")
+    </p>
+}

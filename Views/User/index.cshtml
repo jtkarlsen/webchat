@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebChat.Models.aspnet_User>
+
+@{
+    ViewBag.Title = "Brukere";
+}
+
+<h2>Brukere</h2>
+
+<table>
+    <tr>
+        <th>
+            Navn
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.ActionLink("Endre", "Edit", new { id=item.UserName }) |
+            @Html.ActionLink("Detaljer", "Details", new { id=item.UserName }) |
+            @Html.ActionLink("Slett", "Delete", new { id=item.UserName })
+        </td>
+    </tr>
+}
+
+</table>

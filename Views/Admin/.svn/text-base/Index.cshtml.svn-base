@@ -1,0 +1,14 @@
+﻿@model WebChat.Models.AdminViewModel
+@{
+    ViewBag.Title = "Admin meny";
+}
+
+<div>
+    @Html.ActionLink("Brukere", "ListUsers")
+</div>
+<div>
+    @Html.ActionLink("Chatterom", "ListRooms")
+</div>
+<div>
+    @Html.ActionLink("Beskjeder", "ListMessages")
+</div>

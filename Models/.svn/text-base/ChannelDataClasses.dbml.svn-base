@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="gruppe2_h12" Class="ChannelDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=malmen.hin.no;Initial Catalog=gruppe2_h12;Persist Security Info=True;User ID=gruppe2" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ApplicationServices" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Messages" Member="Messages">
+    <Type Name="Message">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AuthorId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Chatroom" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Member="Message1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="imageId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Image_Message" Member="Image" AccessModifier="Internal" ThisKey="imageId" OtherKey="id" Type="Image" IsForeignKey="true" />
+      <Association Name="aspnet_User_Message" Member="aspnet_User" AccessModifier="Internal" ThisKey="AuthorId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="Chatroom_Message" Member="Chatroom1" AccessModifier="Internal" ThisKey="Chatroom" OtherKey="Id" Type="Chatroom" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Images" Member="Images">
+    <Type Name="Image">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="image" Member="image1" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="imageType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="imageSize" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="imageName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Image_Message" Member="Messages" AccessModifier="Internal" ThisKey="id" OtherKey="imageId" Type="Message" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Roles" Member="aspnet_Roles">
+    <Type Name="aspnet_Role">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredRoleName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="aspnet_Role_aspnet_UsersInRole" Member="aspnet_UsersInRoles" AccessModifier="Internal" ThisKey="RoleId" OtherKey="RoleId" Type="aspnet_UsersInRole" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_UsersInRoles" Member="aspnet_UsersInRoles">
+    <Type Name="aspnet_UsersInRole">
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="aspnet_Role_aspnet_UsersInRole" Member="aspnet_Role" AccessModifier="Internal" ThisKey="RoleId" OtherKey="RoleId" Type="aspnet_Role" IsForeignKey="true" />
+      <Association Name="aspnet_User_aspnet_UsersInRole" Member="aspnet_User" AccessModifier="Internal" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Banned_users" Member="Banned_users">
+    <Type Name="Banned_user">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Chatroom" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_Banned_user" Member="aspnet_User" AccessModifier="Internal" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Chatroom_Banned_user" Member="Chatroom1" AccessModifier="Internal" ThisKey="Chatroom" OtherKey="Id" Type="Chatroom" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Users" Member="aspnet_Users">
+    <Type Name="aspnet_User">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredUserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="MobileAlias" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="IsAnonymous" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastActivityDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MobilePhoneNumber" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="imageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Admin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_Message" Member="Messages" AccessModifier="Internal" ThisKey="UserId" OtherKey="AuthorId" Type="Message" />
+      <Association Name="aspnet_User_aspnet_UsersInRole" Member="aspnet_UsersInRoles" AccessModifier="Internal" ThisKey="UserId" OtherKey="UserId" Type="aspnet_UsersInRole" />
+      <Association Name="aspnet_User_Banned_user" Member="Banned_users" AccessModifier="Internal" ThisKey="UserId" OtherKey="UserId" Type="Banned_user" />
+      <Association Name="aspnet_User_Chatroom" Member="Chatrooms" AccessModifier="Internal" ThisKey="UserId" OtherKey="OwnerId" Type="Chatroom" />
+      <Association Name="aspnet_User_UsersInChatroom" Member="UsersInChatrooms" AccessModifier="Internal" ThisKey="UserId" OtherKey="userId" Type="UsersInChatroom" />
+      <Association Name="aspnet_User_Permitted_user" Member="Permitted_users" AccessModifier="Internal" ThisKey="UserId" OtherKey="UserId" Type="Permitted_user" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Chatrooms" Member="Chatrooms">
+    <Type Name="Chatroom">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IsPublic" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="OwnerId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Chatroom_Message" Member="Messages" AccessModifier="Internal" ThisKey="Id" OtherKey="Chatroom" Type="Message" />
+      <Association Name="Chatroom_Banned_user" Member="Banned_users" AccessModifier="Internal" ThisKey="Id" OtherKey="Chatroom" Type="Banned_user" />
+      <Association Name="Chatroom_UsersInChatroom" Member="UsersInChatrooms" AccessModifier="Internal" ThisKey="Id" OtherKey="chatId" Type="UsersInChatroom" />
+      <Association Name="Chatroom_Permitted_user" Member="Permitted_users" AccessModifier="Internal" ThisKey="Id" OtherKey="Chatroom" Type="Permitted_user" />
+      <Association Name="aspnet_User_Chatroom" Member="aspnet_User" AccessModifier="Internal" ThisKey="OwnerId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UsersInChatroom" Member="UsersInChatrooms">
+    <Type Name="UsersInChatroom">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="chatId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="userId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ActiveOnPhone" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="aspnet_User_UsersInChatroom" Member="aspnet_User" AccessModifier="Internal" ThisKey="userId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+      <Association Name="Chatroom_UsersInChatroom" Member="Chatroom" AccessModifier="Internal" ThisKey="chatId" OtherKey="Id" Type="Chatroom" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Permitted_users" Member="Permitted_users">
+    <Type Name="Permitted_user">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Chatroom" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_Permitted_user" Member="aspnet_User" AccessModifier="Internal" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Chatroom_Permitted_user" Member="Chatroom1" AccessModifier="Internal" ThisKey="Chatroom" OtherKey="Id" Type="Chatroom" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,52 @@
+﻿@model WebChat.Models.ChannelIndexViewModel
+
+<h2>Andre rom</h2>
+
+<table>
+    <tr>
+        <th>
+            Offentlig
+        </th>
+        <th>
+            Navn
+        </th>
+        <th>
+            Maks antall brukere
+        </th>
+        <th>
+            Dato
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.rooms) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsPublic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaximumUsers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+        @foreach (var user in Model.users)
+        {
+            if (user.Chatroom == item.Id && item.IsPublic == "No")
+            {
+                @Html.ActionLink("Åpne", "Room", new { id = item.Name })
+            }
+        }
+        @if (item.IsPublic == "Yes")
+        {
+            @Html.ActionLink("Åpne", "Room", new { id = item.Name })
+        }
+        </td>
+    </tr>
+}
+
+</table>

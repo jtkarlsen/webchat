@@ -1,0 +1,35 @@
+﻿@model WebChat.Models.Message
+
+@{
+    ViewBag.Title = "Detaljer";
+}
+
+<h2>Detaljer</h2>
+
+<fieldset>
+    <legend>Melding</legend>
+
+    <div class="display-label">Forfatter ID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AuthorId)
+    </div>
+
+    <div class="display-label">Dato</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Date)
+    </div>
+
+    <div class="display-label">Chatroom</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Chatroom)
+    </div>
+
+    <div class="display-label">Melding</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Message1)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Endre", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Tilbake", "Index")
+</p>

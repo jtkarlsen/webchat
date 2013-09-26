@@ -1,0 +1,40 @@
+﻿@model WebChat.Models.aspnet_User
+<script type="text/javascript" src="@Url.Content("~/Scripts/tooltip.js")"></script>
+
+<div style="display: none; position: absolute;
+z-index: 110; left: 400; top: 100; width: 15;
+height: 15" id="preview_div"></div>
+@{
+    ViewBag.Title = "Detaljer";
+}
+
+<h2>Detaljer</h2>
+
+<fieldset>
+    <legend>Brukere</legend>
+
+     <img height="140" width="140" id="img" src="@Url.Action("Image", "Message", new { id = Model.imageId })" alt="my image" onmouseover="showtrail(800, 600,'@Url.Action("Image", "Message", new { id = Model.imageId })')" onmouseout="hidetrail()" />
+
+    <div class="display-label">Brukernavn</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+
+    <div class="display-label">Mobilt brukernavn</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MobileAlias)
+    </div>
+
+    <div class="display-label">Anonym</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsAnonymous)
+    </div>
+
+    <div class="display-label">Sist aktiv</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastActivityDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Tilbake", "ListUsers")
+</p>

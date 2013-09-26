@@ -1,0 +1,48 @@
+﻿@model WebChat.Models.ChannelIndexViewModel
+
+
+<h2>Dine Rom</h2>
+
+<table>
+    <tr>
+        <th>
+            Offentlig
+        </th>
+        <th>
+            Navn
+        </th>
+        <th>
+            Maks antall brukere
+        </th>
+        <th>
+            Dato
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.yourRooms) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsPublic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaximumUsers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.ActionLink("Endre", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Åpne", "Room", new { id=item.Id }) |
+            @Html.ActionLink("Slett", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+<p>
+    @Html.ActionLink("Nytt rom", "Create")
+</p>

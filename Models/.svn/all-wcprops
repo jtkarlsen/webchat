@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Models
+END
+ChannelIndexViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Models/ChannelIndexViewModel.cs
+END
+UserRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Models/UserRepository.cs
+END
+ChannelDataClasses.designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/34/trunk/Oblig2/WebChat/WebChat/Models/ChannelDataClasses.designer.cs
+END
+AccountModels.cs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Models/AccountModels.cs
+END
+AdminViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Models/AdminViewModel.cs
+END
+MessageRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Models/MessageRepository.cs
+END
+MessageFormViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Models/MessageFormViewModel.cs
+END
+ChannelDataClasses.dbml.layout
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/34/trunk/Oblig2/WebChat/WebChat/Models/ChannelDataClasses.dbml.layout
+END
+AdminRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Models/AdminRepository.cs
+END
+ChannelFormViewModel.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Models/ChannelFormViewModel.cs
+END
+ChannelRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Models/ChannelRepository.cs
+END
+ChannelDataClasses.dbml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/34/trunk/Oblig2/WebChat/WebChat/Models/ChannelDataClasses.dbml
+END

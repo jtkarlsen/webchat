@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Controllers
+END
+HomeController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Controllers/HomeController.cs
+END
+AdminController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Controllers/AdminController.cs
+END
+ChannelController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Controllers/ChannelController.cs
+END
+AccountController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Controllers/AccountController.cs
+END
+UserController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Controllers/UserController.cs
+END
+MessageController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Controllers/MessageController.cs
+END

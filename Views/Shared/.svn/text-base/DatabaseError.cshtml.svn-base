@@ -1,0 +1,10 @@
+﻿@model WebChat.Models.Chatroom
+
+@{
+    ViewBag.Title = "DatabaseError";
+}
+
+<h2>DatabaseError: Håvard sin feil</h2>
+<p>
+@Html.ActionLink("Prøv igjen", "Create") | @Html.ActionLink("Tilbake til hovedsiden", "index")
+</p>

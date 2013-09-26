@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Admin
+END
+DetailsUsers.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Admin/DetailsUsers.cshtml
+END
+EditUsers.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Admin/EditUsers.cshtml
+END
+Index.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Admin/Index.cshtml
+END
+DeleteMessages.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Admin/DeleteMessages.cshtml
+END
+ListRooms.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Admin/ListRooms.cshtml
+END
+EditMessages.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Admin/EditMessages.cshtml
+END
+ListUsers.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Admin/ListUsers.cshtml
+END
+DetailsMessages.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Admin/DetailsMessages.cshtml
+END
+UserForm.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Admin/UserForm.cshtml
+END
+ListMessages.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Admin/ListMessages.cshtml
+END
+CreateChatrooms.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Admin/CreateChatrooms.cshtml
+END
+EditChatrooms.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Admin/EditChatrooms.cshtml
+END
+DetailsRooms.cshtml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/26/trunk/Oblig2/WebChat/WebChat/Views/Admin/DetailsRooms.cshtml
+END

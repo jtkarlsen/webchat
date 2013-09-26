@@ -1,0 +1,8 @@
+﻿@if(Request.IsAuthenticated) {
+    <text>Velkommen <strong>@User.Identity.Name</strong>! 
+    [ @Html.ActionLink("Endre passord", "changePassword", "Account") ]
+    [ @Html.ActionLink("Logg av", "LogOff", "Account") ]</text>
+}
+else {
+    @:[ @Html.ActionLink("Logg på", "LogOn", "Account") ]
+}
